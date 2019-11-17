@@ -1,4 +1,5 @@
 export const actionTypes = {
   LOGIN: "LOGIN",
-  LOGOUT: "LOGOUT"
+  LOGOUT: "LOGOUT",
+  SET_LANGUAGE: "SET_LANGUAGE"
 };

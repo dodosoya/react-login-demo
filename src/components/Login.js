@@ -12,6 +12,8 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import { AuthContext } from "../App";
 import { actionTypes } from "../action";
+import { FormattedMessage } from "react-intl";
+import Language from "./Language";
 
 function Copyright() {
   return (
@@ -102,7 +104,7 @@ export default function Login() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Log In
+            <FormattedMessage id="app.login" />
           </Typography>
           <form className={classes.form} noValidate onSubmit={handleFormSubmit}>
             <TextField
@@ -111,7 +113,7 @@ export default function Login() {
               required
               fullWidth
               id="username"
-              label="User Name"
+              label={<FormattedMessage id="app.login.username" />}
               name="username"
               autoFocus
               value={data.username}
@@ -123,7 +125,7 @@ export default function Login() {
               required
               fullWidth
               name="password"
-              label="Password"
+              label={<FormattedMessage id="app.login.password" />}
               type="password"
               id="password"
               autoComplete="current-password"
@@ -141,8 +143,13 @@ export default function Login() {
               className={classes.submit}
               disabled={data.isSubmitting}
             >
-              {data.isSubmitting ? "Loading..." : "Log In"}
+              {data.isSubmitting ? (
+                <FormattedMessage id="app.login.loading" />
+              ) : (
+                <FormattedMessage id="app.login" />
+              )}
             </Button>
+            <Language />
             <Box mt={5}>
               <Copyright />
             </Box>

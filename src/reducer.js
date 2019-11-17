@@ -19,6 +19,11 @@ export const reducer = (state, action) => {
         username: null,
         token: null
       };
+    case actionTypes.SET_LANGUAGE:
+      return {
+        ...state,
+        language: action.payload.language
+      };
     default:
       return state;
   }

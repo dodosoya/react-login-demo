@@ -23,6 +23,8 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { AuthContext } from "../App";
 import { actionTypes } from "../action";
+import Language from "./Language";
+import { FormattedMessage } from "react-intl";
 
 function Copyright() {
   return (
@@ -177,8 +179,9 @@ export default function Dashboard() {
             noWrap
             className={classes.title}
           >
-            Dashboard
+            <FormattedMessage id="app.dashboard" />
           </Typography>
+          <Language />
           <IconButton color="inherit">
             <Badge badgeContent={1} color="secondary">
               <NotificationsIcon />
@@ -209,9 +212,13 @@ export default function Dashboard() {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
+            <MenuItem onClick={handleClose}>
+              <FormattedMessage id="app.settings" />
+            </MenuItem>
             <Divider />
-            <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            <MenuItem onClick={handleLogout}>
+              <FormattedMessage id="app.logout" />
+            </MenuItem>
           </Menu>
         </Toolbar>
       </AppBar>
