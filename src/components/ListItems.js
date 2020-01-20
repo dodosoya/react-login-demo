@@ -11,7 +11,7 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary={<FormattedMessage id="app.dashboard" />} />
+      <ListItemText primary={<FormattedMessage id="app.dashboard.name" />} />
     </ListItem>
   </div>
 );

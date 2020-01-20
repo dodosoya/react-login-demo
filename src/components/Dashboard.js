@@ -179,7 +179,7 @@ export default function Dashboard() {
             noWrap
             className={classes.title}
           >
-            <FormattedMessage id="app.dashboard" />
+            <FormattedMessage id="app.dashboard.name" />
           </Typography>
           <Language />
           <IconButton color="inherit">
@@ -213,11 +213,11 @@ export default function Dashboard() {
             onClose={handleClose}
           >
             <MenuItem onClick={handleClose}>
-              <FormattedMessage id="app.settings" />
+              <FormattedMessage id="app.settings.name" />
             </MenuItem>
             <Divider />
             <MenuItem onClick={handleLogout}>
-              <FormattedMessage id="app.logout" />
+              <FormattedMessage id="app.logout.name" />
             </MenuItem>
           </Menu>
         </Toolbar>
@@ -244,7 +244,7 @@ export default function Dashboard() {
           <Grid container spacing={3}>
             <Grid item xs={12} md={4} lg={3}>
               <Paper className={fixedHeightPaper}>
-                <h1>Welcome Back!</h1>
+                <h1><FormattedMessage id="app.dashboard.message" /></h1>
               </Paper>
             </Grid>
           </Grid>

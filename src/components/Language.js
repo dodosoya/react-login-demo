@@ -40,7 +40,7 @@ export default function Language() {
     <div>
       <FormControl variant="outlined" className={classes.formControl}>
         <InputLabel ref={inputLabel} id="select-language-label">
-          <FormattedMessage id="app.language" />
+          <FormattedMessage id="app.language.name" />
         </InputLabel>
         <Select
           labelId="select-language-label"

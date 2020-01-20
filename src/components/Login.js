@@ -104,7 +104,7 @@ export default function Login() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            <FormattedMessage id="app.login" />
+            <FormattedMessage id="app.login.name" />
           </Typography>
           <form className={classes.form} noValidate onSubmit={handleFormSubmit}>
             <TextField
@@ -146,7 +146,7 @@ export default function Login() {
               {data.isSubmitting ? (
                 <FormattedMessage id="app.login.loading" />
               ) : (
-                <FormattedMessage id="app.login" />
+                <FormattedMessage id="app.login.name" />
               )}
             </Button>
             <Language />

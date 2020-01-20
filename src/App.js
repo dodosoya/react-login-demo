@@ -13,6 +13,7 @@ import { reducer } from "./reducer";
 import { IntlProvider } from "react-intl";
 import { zh_TW } from "./i18n/zh-TW";
 import { en } from "./i18n/en";
+import flatten from "flat";
 
 export const AuthContext = React.createContext();
 const initialState = {
@@ -52,7 +53,7 @@ function App() {
       locale={state.language}
       key={state.language}
       defaultLocale="zh-TW"
-      messages={messages}
+      messages={flatten(messages)}
     >
       <AuthContext.Provider
         value={{
